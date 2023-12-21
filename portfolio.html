@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="portfolio.css">
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="landing-page">
+            <div class="landing-text">
+                <h1>HAILEY</br>SMITH</h1>
+                <h3>I Am A Photographer</h3>
+            </div>
+            <div class="landing-image">
+                <img src="images/PJ.jpg" />
+            </div>
+        </div> 
+        <div class="bio">
+            <h2>BIOGRAPHY</h2>
+            <h4>Renowned international photographer,Hailey Smith, is a visual storyteller whose lens captures the essence of diverse cultures and landscapes. Born in Rome in 1975, Rossi's journey into photography began as a passionate hobby, eventually transforming into a lifelong vocation. His distinct style combines technical prowess with an unparalleled sensitivity to human emotion.
+            </br></br>
+            Over the years,including the prestigious World Press Photo Award and National Geographic Photography Prize. His ability to convey narratives through images has led him to remote corners of the globe, documenting social issues and cultural phenomena. From the bustling streets of Tokyo to the serene landscapes of Patagonia, Rossi's portfolio is a testament to his commitment to bridging cultural divides. Through his lens, he not only captures moments but also fosters a global understanding, earning him a place among the most celebrated photographers of our time.
+            </h4>
+        </div>
+        <main class="achievements">
+            <h2 class="achievements-text">My Masterpieces</h2>
+            <div class="slide-container">
+                <div class="slides">
+                  <span class="active">
+                    <img class="box" src="images/A.jpg"/>
+                    <img class="box" src="images/B.jpg"/>
+                    <img class="box" src="images/C.jpg"/>
+                    <h1 class="box">WILDLIFE</h1>
+                    <img class="box" src="images/D.jpg"/>
+                    <img class="box" src="images/E.jpg"/>
+                    <img class="box" src="images/F.jpg"/>
+                    <img class="box" src="images/G.jpg"/>
+                </span>
+                <span id="s2">
+                <img class="box" src="images/NA.jpg"/>
+                <img class="box" src="images/NB.jpg"/>
+                <img class="box" src="images/NC.jpg"/>
+                <h1 class="box">NATURE</h1>
+                <img class="box" src="images/ND.jpg"/>
+                <img class="box" src="images/NE.jpg"/>
+                <img class="box" src="images/NF.jpg"/>
+                <img class="box" src="images/NG.jpg"/>
+                  </span>
+                <span id="s3" >
+                    <img class="box" src="images/HA.jpg"/>
+                <img class="box" src="images/HB.jpg"/>
+                <img class="box" src="images/HC.jpg"/>
+                <h1 class="box">HUMANS</h1>
+                <img class="box" src="images/HD.jpg"/>
+                <img class="box" src="images/HE.jpg"/>
+                <img class="box" src="images/HF.jpg"/>
+                <img class="box" src="images/HG.jpg"/>
+                    </span>
+                    <span id="s3">
+                        <img class="box" src="images/VA.jpg"/>
+                    <img class="box" src="images/VB.jpg"/>
+                    <img class="box" src="images/VC.jpg"/>
+                    <h1 class="box">VEHICLES</h1>
+                    <img class="box" src="images/VD.jpg"/>
+                    <img class="box" src="images/VE.jpg"/>
+                    <img class="box" src="images/VF.jpg"/>
+                    <img class="box" src="images/VG.jpg"/>
+                        </span>
+                    <span id="s3">
+                        <img class="box" src="images/RA.jpg"/>
+                        <img class="box" src="images/RB.jpg"/>
+                        <img class="box" src="images/RC.jpg"/>
+                        <h1 class="box">RANDOM</h1>
+                        <img class="box" src="images/RD.jpg"/>
+                        <img class="box" src="images/RE.jpg"/>
+                        <img class="box" src="images/RF.jpg"/>
+                        <img class="box" src="images/RG.jpg"/>
+                    </span>
+                </div>
+                <div class="buttons">
+                  <div class="next">&#10095;</div>
+                  <div class="prev">&#10094;</div>
+                </div>
+               </div>
+            
+        </main>
+        <section>
+            <h1>HIRE ME</h1>
+            <div class="newsletter">
+            <input type="text" placeholder="Email address" name="mail" required>
+            <input type="submit" value="Subscribe" onclick="text();"/>
+            </div>
+          </section>
+        <footer>
+                <h1>HAILEY SMITH</h1>
+            <div class="social">
+                <h2><i class="ri-instagram-line"></i></h2>
+                <h2><i class="ri-dribbble-line"></i></h2>
+                <h2><i class="ri-youtube-line"></i></h2>
+            </div>
+        </footer>
+        <h3 class="creator">Design & Coded by @Dolly Jain</h3>
+        <script>
+            let slideImages=document.querySelectorAll('span');
+    
+    let next= document.querySelector('.next');
+    let prev= document.querySelector('.prev');
+    
+    var counter=0;
+    
+    next.addEventListener('click', slideNext);
+    function slideNext(){
+      slideImages[counter].style.animation="next1 0.5s ease-in forwards";
+      if(counter>=slideImages.length-1){
+        counter=0;
+      }
+      else{
+        counter++;
+      }
+      slideImages[counter].style.animation="next2 0.5s ease-in forwards";
+    }
+    prev.addEventListener('click', slidePrev);
+    function slidePrev(){
+      slideImages[counter].style.animation="prev1 0.5s ease-in forwards";
+      if(counter==0){
+        counter=slideImages.length-1;
+      }
+      else{
+        counter--;
+      }
+      slideImages[counter].style.animation="prev2 0.5s ease-in forwards";
+    }
+
+    function text(){
+  alert("Thanks for reaching out to me."+"I will contact you soon!!");
+}
+           </script>
+    </body>    
+</html>

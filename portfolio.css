@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Literata', serif;
+    scroll-behavior: smooth;
+}
+.landing-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* background-color: #000; */
+    transition:name 0.5s linear infinite;
+}
+.landing-text{
+    transition:name 0.5s ease-out;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 1;
+}
+.landing-text h1{
+    width: 60vw;
+    font-size: 10vw;
+    font-weight: 400;
+    z-index: 1;
+    height: 80vh;
+    /* background-color: #fff; */
+    /* text-decoration:underline; */
+    text-shadow: 0.5px 1px 1px rgb(92, 88, 88);
+    color: #000;
+    font-style: oblique;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Playfair Display', serif;
+}
+.landing-text h3{
+    font-size: 30px;
+    color:#fff;
+    width: 60vw;
+    padding: 20px;
+    text-align:end;
+    height: 10vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #000;
+}
+.landing-image{
+    width: 40vw;
+    height: 100vh;
+    display:flex;
+}
+.landing-image img{
+    width: 40vw;
+    /* height: 90vh; */ 
+}
+/*/--BIO SECTION STARTS--/*/
+.bio{
+    width: 100%;
+    background-color: #000;
+     display: flex;
+     align-items: center;
+    justify-content: center; 
+    flex-direction:row;
+    height: 60vh;
+}
+.bio h2{
+    color: #fff;
+    width: 30%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Calligraffitti', cursive;
+}
+.bio h4{
+    color:#fff;
+    width: 70%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   padding: 30px;
+    display: flex;
+     align-items: center;
+    justify-content: center; 
+    font-size: 18px;
+}
+/*/--BIO SECTION ENDS--/*/
+/*--Achievements--*/
+.achievements{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.achievements-text{
+    color: #000;
+    text-align: center;
+    width: 100vw;
+    padding:0 10px;
+    height: 10vh;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Calligraffitti', cursive;
+}
+
+  .slide-container{
+    position: relative;
+    width: 94vw;
+    height:80vh;
+    border: 3px solid #568;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  .slide-container .slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide-container .slides span{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    padding: 6vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+  }
+  span img{
+    width: 20vw;
+    gap: 20px;
+    height: 30vh;
+    position: center;
+    box-shadow:  5px 5px 10px #000;
+  }
+  span  h1{
+    font-size: 50px;
+    display: flex;
+    width: 20vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Calligraffitti', cursive;
+}
+span h1:hover{
+    box-shadow: none;
+}
+  span img:hover{
+    translate: 5px;
+    box-shadow: 2px 1px 3px 2px white;
+  }
+  .slide-container .slides span:not(.active){
+    top:0;
+   left:-100%;
+   background-color: black;
+  }
+  
+ div.next, div.prev{
+     position: absolute;
+     top: 50%;         
+      transform: translateY(-50%);        
+      padding: 14px;
+      color: #fff;        
+      font-size: 24px;
+      font-weight: bold;
+      transition: 0.5s;
+      border-radius: 3px;
+      user-select: none;
+      cursor: pointer;
+      z-index: 1;                 
+  }
+  div.next{
+  right: 0px;
+  }
+  div.prev{
+   left: 0px;
+  }
+  div.next:hover,div.prev:hover{
+    background-color: #fff;
+    opacity: 0.8;
+    color: #000;
+  }
+  @keyframes next1{
+    from{
+      left: 0%
+    }
+    to{
+      left: -100%;
+    }
+  }
+  @keyframes next2{
+    from{
+      left: 100%
+    }
+    to{
+      left: 0%;
+    }
+  }
+  
+  @keyframes prev1{
+    from{
+      left: 0%
+    }
+    to{
+      left: 100%;
+    }
+  }
+  @keyframes prev2{
+    from{
+      left: -100%
+    }
+    to{
+      left: 0%;
+    }
+  }
+/* Achievements End */
+
+/*Contact Me Section */
+section{
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    border-bottom: 2px  solid black;
+}
+section h1{
+  font-family: 'Calligraffitti', cursive;
+  font-size: 40px;
+  font-weight: 900;
+  
+}
+.newsletter{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter input{
+  height: 30px;
+  font-size: 20px;
+  padding:0px 50px;
+}
+.newsletter input:nth-child(2):hover{
+  translate: 1px;
+  border: 2px solid #000;
+}
+.newsletter input:nth-child(1){
+  border-radius: 20px 0 0 0 ;
+  background-color: #fff;
+  color: #000;
+}
+.newsletter input:nth-child(2){
+  border-radius:  0 0  20px 0;
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+.creator{
+  height: 5vh;
+ display:flex ;
+ background-color: #000;
+ color: #fff;
+ border-top: 1px solid #fff;
+ justify-content: center;
+ align-items: center;
+
+}
+footer{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    background-color: #000;
+}
+footer h1{
+    color: #fff;
+    font-family: 'Calligraffitti', cursive;
+}
+.social{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+}
+footer h2{
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px)and (max-width: 999px) {
+  /* Styles for tablets and smaller screens */
+
+  .landing-page {
+      flex-direction: column;
+  }
+
+  .landing-text,
+  .landing-image {
+      width: 100%;
+  }
+
+  .landing-text h1 {
+      font-size: 8vw;
+  }
+  .bio h4{
+    font-size:x-small;
+  }
+  .bio h2,
+  .achievements-text,
+  section h1 {
+      font-size: 24px;
+  }
+
+  .newsletter input {
+      padding: 8px;
+  }
+
+  footer h2 {
+      font-size: 24px;
+  }
+}
